@@ -20,7 +20,7 @@ public class SchedulingTest {
         $("span[data-test-id='city'] input").setValue(user.getCity().substring(0, 2));
         $$("div.menu div.menu-item").find(exactText(user.getCity())).click();
 
-        $("span[data-test-id='date'] input.input__control").sendKeys((Keys.chord(Keys.CONTROL+"a")+Keys.DELETE));
+        $("span[data-test-id='date'] input.input__control").sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE);
         $("span[data-test-id='date'] input.input__control").setValue(dateOrder1);
 
         $("span[data-test-id='name'] input").setValue(user.getName());
@@ -31,7 +31,7 @@ public class SchedulingTest {
         $("div.notification__content").waitUntil(text("Встреча успешно запланирована на " + dateOrder1),
                 20000);
 
-        $("span[data-test-id='date'] input.input__control").sendKeys(Keys.chord(Keys.COMMAND+"a")+Keys.BACK_SPACE);;
+        $("span[data-test-id='date'] input.input__control").sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE);;
         $("span[data-test-id='date'] input.input__control").setValue(dateOrder2);
 
         $$("button").find(exactText("Запланировать")).click();
