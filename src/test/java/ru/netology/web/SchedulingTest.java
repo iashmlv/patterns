@@ -3,7 +3,6 @@ package ru.netology.web;
 import lombok.val;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
-import ru.netology.DataGenerator;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
